@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="stockproduitModelStoreContainer" CdmEntityContainer="stockproduitEntities3">
+    <EntitySetMapping Name="categorie">
+      <EntityTypeMapping TypeName="stockproduitModel.categorie">
+        <MappingFragment StoreEntitySet="categorie">
+          <ScalarProperty Name="IdCategorie" ColumnName="IdCategorie" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produit">
+      <EntityTypeMapping TypeName="stockproduitModel.produit">
+        <MappingFragment StoreEntitySet="produit">
+          <ScalarProperty Name="Idprouit" ColumnName="Idprouit" />
+          <ScalarProperty Name="DenominationProduit" ColumnName="DenominationProduit" />
+          <ScalarProperty Name="CategorieProuit" ColumnName="CategorieProuit" />
+          <ScalarProperty Name="QuantiteProduit" ColumnName="QuantiteProduit" />
+          <ScalarProperty Name="PUProduit" ColumnName="PUProduit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

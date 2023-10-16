@@ -1,0 +1,13 @@
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\WcfGestionStock.dll.config
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\WcfGestionStock.dll
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\WcfGestionStock.pdb
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\EntityFramework.dll
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\EntityFramework.SqlServer.dll
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\EntityFramework.xml
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\EntityFramework.SqlServer.xml
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\bin\fr\EntityFramework.resources.dll
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\obj\Debug\WcfGestionStock.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\obj\Debug\WcfGestionStock.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\obj\Debug\WcfGestionStock.csproj.CopyComplete
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\obj\Debug\WcfGestionStock.dll
+C:\Users\Utilisateur\source\repos\GestionStock\WcfGestionStock\obj\Debug\WcfGestionStock.pdb

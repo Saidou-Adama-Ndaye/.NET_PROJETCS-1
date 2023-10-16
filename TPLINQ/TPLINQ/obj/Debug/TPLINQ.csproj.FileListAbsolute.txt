@@ -1,0 +1,17 @@
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\TPLINQ.exe.config
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\TPLINQ.exe
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\TPLINQ.pdb
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\EntityFramework.dll
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\EntityFramework.xml
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.Form1.resources
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.Properties.Resources.resources
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.csproj.GenerateResource.cache
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.csproj.CopyComplete
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.exe
+C:\Users\Utilisateur\source\repos\TPLINQ\TPLINQ\obj\Debug\TPLINQ.pdb

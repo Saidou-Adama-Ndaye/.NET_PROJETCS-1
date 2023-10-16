@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GestionCarnetContactModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="IdContact" />
+          </Key>
+          <Property Name="IdContact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="nvarchar" MaxLength="80" />
+          <Property Name="Prenom" Type="nvarchar" MaxLength="80" />
+          <Property Name="CSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sexe" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ville" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NumTel">
+          <Key>
+            <PropertyRef Name="IdNumTel" />
+          </Key>
+          <Property Name="IdNumTel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdContact" Type="int" />
+          <Property Name="NumeroTel" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_NumTel_Contact">
+          <End Role="Contact" Type="Self.Contact" Multiplicity="0..1" />
+          <End Role="NumTel" Type="Self.NumTel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="IdContact" />
+            </Principal>
+            <Dependent Role="NumTel">
+              <PropertyRef Name="IdContact" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GestionCarnetContactModelStoreContainer">
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NumTel" EntityType="Self.NumTel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NumTel_Contact" Association="Self.FK_NumTel_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="NumTel" EntitySet="NumTel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GestionCarnetContactModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="IdContact" />
+          </Key>
+          <Property Name="IdContact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Prenom" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="CSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sexe" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ville" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NumTel" Relationship="Self.FK_NumTel_Contact" FromRole="Contact" ToRole="NumTel" />
+        </EntityType>
+        <EntityType Name="NumTel">
+          <Key>
+            <PropertyRef Name="IdNumTel" />
+          </Key>
+          <Property Name="IdNumTel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdContact" Type="Int32" />
+          <Property Name="NumeroTel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Contact" Relationship="Self.FK_NumTel_Contact" FromRole="NumTel" ToRole="Contact" />
+        </EntityType>
+        <Association Name="FK_NumTel_Contact">
+          <End Role="Contact" Type="Self.Contact" Multiplicity="0..1" />
+          <End Role="NumTel" Type="Self.NumTel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="IdContact" />
+            </Principal>
+            <Dependent Role="NumTel">
+              <PropertyRef Name="IdContact" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GestionCarnetContactEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contact" EntityType="Self.Contact" />
+          <EntitySet Name="NumTel" EntityType="Self.NumTel" />
+          <AssociationSet Name="FK_NumTel_Contact" Association="Self.FK_NumTel_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="NumTel" EntitySet="NumTel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GestionCarnetContactModelStoreContainer" CdmEntityContainer="GestionCarnetContactEntities">
+          <EntitySetMapping Name="Contact">
+            <EntityTypeMapping TypeName="GestionCarnetContactModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="IdContact" ColumnName="IdContact" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+                <ScalarProperty Name="CSP" ColumnName="CSP" />
+                <ScalarProperty Name="Sexe" ColumnName="Sexe" />
+                <ScalarProperty Name="Ville" ColumnName="Ville" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NumTel">
+            <EntityTypeMapping TypeName="GestionCarnetContactModel.NumTel">
+              <MappingFragment StoreEntitySet="NumTel">
+                <ScalarProperty Name="IdNumTel" ColumnName="IdNumTel" />
+                <ScalarProperty Name="IdContact" ColumnName="IdContact" />
+                <ScalarProperty Name="NumeroTel" ColumnName="NumeroTel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

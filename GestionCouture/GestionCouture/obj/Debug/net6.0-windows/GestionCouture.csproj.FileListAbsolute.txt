@@ -1,0 +1,14 @@
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.FormMainMenu.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Forms.FormCustomers.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Forms.FormNotifications.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Forms.FormOrders.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Forms.FormProduct.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Forms.FormReporting.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Forms.FormSetting.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.Properties.Resources.resources
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.csproj.GenerateResource.cache
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.AssemblyInfo.cs
+C:\Users\Utilisateur\source\repos\GestionCouture\GestionCouture\obj\Debug\net6.0-windows\GestionCouture.csproj.CoreCompileInputs.cache

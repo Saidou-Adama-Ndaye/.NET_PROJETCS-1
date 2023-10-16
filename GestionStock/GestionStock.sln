@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppGestionStock", "AppGestionStock\AppGestionStock.csproj", "{09EA0C30-CBDA-4326-934C-DA75C68E1836}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5ED843D-70A8-456A-A255-7D5F7C40E6DD} = {A5ED843D-70A8-456A-A255-7D5F7C40E6DD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfGestionStock", "WcfGestionStock\WcfGestionStock.csproj", "{A5ED843D-70A8-456A-A255-7D5F7C40E6DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09EA0C30-CBDA-4326-934C-DA75C68E1836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EA0C30-CBDA-4326-934C-DA75C68E1836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EA0C30-CBDA-4326-934C-DA75C68E1836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EA0C30-CBDA-4326-934C-DA75C68E1836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5ED843D-70A8-456A-A255-7D5F7C40E6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5ED843D-70A8-456A-A255-7D5F7C40E6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5ED843D-70A8-456A-A255-7D5F7C40E6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5ED843D-70A8-456A-A255-7D5F7C40E6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6220BD9-C7B6-46CE-93FC-E9B9379F2CEE}
+	EndGlobalSection
+EndGlobal

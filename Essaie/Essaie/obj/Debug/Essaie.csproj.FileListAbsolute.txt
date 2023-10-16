@@ -1,0 +1,17 @@
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\Essaie.exe.config
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\Essaie.exe
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\Essaie.pdb
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\EntityFramework.dll
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\EntityFramework.xml
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.Properties.Resources.resources
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.csproj.GenerateResource.cache
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.csproj.CopyComplete
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.exe
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.pdb
+C:\Users\Utilisateur\source\repos\Essaie\Essaie\obj\Debug\Essaie.Form1.resources

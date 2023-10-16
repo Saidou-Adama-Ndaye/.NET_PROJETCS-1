@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GestionCarnetContactModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="IdContact" />
+    </Key>
+    <Property Name="IdContact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Prenom" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="CSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sexe" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Ville" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NumTel" Relationship="Self.FK_NumTel_Contact" FromRole="Contact" ToRole="NumTel" />
+  </EntityType>
+  <EntityType Name="NumTel">
+    <Key>
+      <PropertyRef Name="IdNumTel" />
+    </Key>
+    <Property Name="IdNumTel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdContact" Type="Int32" />
+    <Property Name="NumeroTel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Contact" Relationship="Self.FK_NumTel_Contact" FromRole="NumTel" ToRole="Contact" />
+  </EntityType>
+  <Association Name="FK_NumTel_Contact">
+    <End Role="Contact" Type="Self.Contact" Multiplicity="0..1" />
+    <End Role="NumTel" Type="Self.NumTel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="IdContact" />
+      </Principal>
+      <Dependent Role="NumTel">
+        <PropertyRef Name="IdContact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GestionCarnetContactEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contact" EntityType="Self.Contact" />
+    <EntitySet Name="NumTel" EntityType="Self.NumTel" />
+    <AssociationSet Name="FK_NumTel_Contact" Association="Self.FK_NumTel_Contact">
+      <End Role="Contact" EntitySet="Contact" />
+      <End Role="NumTel" EntitySet="NumTel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GestionCarnetContactModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="IdContact" />
+    </Key>
+    <Property Name="IdContact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar" MaxLength="80" />
+    <Property Name="Prenom" Type="nvarchar" MaxLength="80" />
+    <Property Name="CSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sexe" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ville" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NumTel">
+    <Key>
+      <PropertyRef Name="IdNumTel" />
+    </Key>
+    <Property Name="IdNumTel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdContact" Type="int" />
+    <Property Name="NumeroTel" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_NumTel_Contact">
+    <End Role="Contact" Type="Self.Contact" Multiplicity="0..1" />
+    <End Role="NumTel" Type="Self.NumTel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="IdContact" />
+      </Principal>
+      <Dependent Role="NumTel">
+        <PropertyRef Name="IdContact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GestionCarnetContactModelStoreContainer">
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumTel" EntityType="Self.NumTel" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NumTel_Contact" Association="Self.FK_NumTel_Contact">
+      <End Role="Contact" EntitySet="Contact" />
+      <End Role="NumTel" EntitySet="NumTel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BDGLAtelierModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="int" Nullable="false" />
+          <Property Name="CNIClient" Type="nvarchar" MaxLength="20" />
+          <Property Name="SexeClient" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Gerant">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="int" Nullable="false" />
+          <Property Name="IdentifiantGer" Type="nvarchar" MaxLength="20" />
+          <Property Name="MotDePasseGer" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Mesure">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="int" Nullable="false" />
+          <Property Name="TourP" Type="float" />
+          <Property Name="TourT" Type="float" />
+          <Property Name="TourB" Type="float" />
+          <Property Name="CarrureDev" Type="float" />
+          <Property Name="CarrureDos" Type="float" />
+          <Property Name="LongE" Type="float" />
+          <Property Name="TourBras" Type="float" />
+          <Property Name="HautTG" Type="float" />
+          <Property Name="EcartPS" Type="float" />
+          <Property Name="LongBD" Type="float" />
+          <Property Name="LongPS" Type="float" />
+          <Property Name="LongBusteD" Type="float" />
+          <Property Name="LongBP" Type="float" />
+          <Property Name="HautTD" Type="float" />
+          <Property Name="LongTC" Type="float" />
+          <Property Name="HautEJ" Type="float" />
+        </EntityType>
+        <EntityType Name="Personne">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomPers" Type="nvarchar" MaxLength="80" />
+          <Property Name="PrenomPers" Type="nvarchar" MaxLength="80" />
+          <Property Name="AdressePers" Type="nvarchar" MaxLength="50" />
+          <Property Name="TelPers" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Utilisateur">
+          <Key>
+            <PropertyRef Name="IUtilisateur" />
+          </Key>
+          <Property Name="IUtilisateur" Type="int" Nullable="false" />
+          <Property Name="Identifiant" Type="nvarchar" MaxLength="255" />
+          <Property Name="MotDePasse" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="BDGLAtelierModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gerant" EntityType="Self.Gerant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mesure" EntityType="Self.Mesure" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Utilisateur" EntityType="Self.Utilisateur" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BDGLAtelierModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="Int32" Nullable="false" />
+          <Property Name="CNIClient" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SexeClient" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Gerant">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="Int32" Nullable="false" />
+          <Property Name="IdentifiantGer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MotDePasseGer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Mesure">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="Int32" Nullable="false" />
+          <Property Name="TourP" Type="Double" />
+          <Property Name="TourT" Type="Double" />
+          <Property Name="TourB" Type="Double" />
+          <Property Name="CarrureDev" Type="Double" />
+          <Property Name="CarrureDos" Type="Double" />
+          <Property Name="LongE" Type="Double" />
+          <Property Name="TourBras" Type="Double" />
+          <Property Name="HautTG" Type="Double" />
+          <Property Name="EcartPS" Type="Double" />
+          <Property Name="LongBD" Type="Double" />
+          <Property Name="LongPS" Type="Double" />
+          <Property Name="LongBusteD" Type="Double" />
+          <Property Name="LongBP" Type="Double" />
+          <Property Name="HautTD" Type="Double" />
+          <Property Name="LongTC" Type="Double" />
+          <Property Name="HautEJ" Type="Double" />
+        </EntityType>
+        <EntityType Name="Personne">
+          <Key>
+            <PropertyRef Name="IdPers" />
+          </Key>
+          <Property Name="IdPers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomPers" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="PrenomPers" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="AdressePers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TelPers" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="BDGLAtelierEntities7" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Gerant" EntityType="Self.Gerant" />
+          <EntitySet Name="Mesure" EntityType="Self.Mesure" />
+          <EntitySet Name="Personne" EntityType="Self.Personne" />
+          <EntitySet Name="Utilisateur" EntityType="BDGLAtelierModel.Utilisateur" />
+        </EntityContainer>
+        <EntityType Name="Utilisateur">
+          <Key>
+            <PropertyRef Name="IUtilisateur" />
+          </Key>
+          <Property Name="IUtilisateur" Type="Int32" Nullable="false" />
+          <Property Name="Identifiant" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MotDePasse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BDGLAtelierModelStoreContainer" CdmEntityContainer="BDGLAtelierEntities7">
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="BDGLAtelierModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="IdPers" ColumnName="IdPers" />
+                <ScalarProperty Name="CNIClient" ColumnName="CNIClient" />
+                <ScalarProperty Name="SexeClient" ColumnName="SexeClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gerant">
+            <EntityTypeMapping TypeName="BDGLAtelierModel.Gerant">
+              <MappingFragment StoreEntitySet="Gerant">
+                <ScalarProperty Name="IdPers" ColumnName="IdPers" />
+                <ScalarProperty Name="IdentifiantGer" ColumnName="IdentifiantGer" />
+                <ScalarProperty Name="MotDePasseGer" ColumnName="MotDePasseGer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mesure">
+            <EntityTypeMapping TypeName="BDGLAtelierModel.Mesure">
+              <MappingFragment StoreEntitySet="Mesure">
+                <ScalarProperty Name="IdPers" ColumnName="IdPers" />
+                <ScalarProperty Name="TourP" ColumnName="TourP" />
+                <ScalarProperty Name="TourT" ColumnName="TourT" />
+                <ScalarProperty Name="TourB" ColumnName="TourB" />
+                <ScalarProperty Name="CarrureDev" ColumnName="CarrureDev" />
+                <ScalarProperty Name="CarrureDos" ColumnName="CarrureDos" />
+                <ScalarProperty Name="LongE" ColumnName="LongE" />
+                <ScalarProperty Name="TourBras" ColumnName="TourBras" />
+                <ScalarProperty Name="HautTG" ColumnName="HautTG" />
+                <ScalarProperty Name="EcartPS" ColumnName="EcartPS" />
+                <ScalarProperty Name="LongBD" ColumnName="LongBD" />
+                <ScalarProperty Name="LongPS" ColumnName="LongPS" />
+                <ScalarProperty Name="LongBusteD" ColumnName="LongBusteD" />
+                <ScalarProperty Name="LongBP" ColumnName="LongBP" />
+                <ScalarProperty Name="HautTD" ColumnName="HautTD" />
+                <ScalarProperty Name="LongTC" ColumnName="LongTC" />
+                <ScalarProperty Name="HautEJ" ColumnName="HautEJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personne">
+            <EntityTypeMapping TypeName="BDGLAtelierModel.Personne">
+              <MappingFragment StoreEntitySet="Personne">
+                <ScalarProperty Name="IdPers" ColumnName="IdPers" />
+                <ScalarProperty Name="NomPers" ColumnName="NomPers" />
+                <ScalarProperty Name="PrenomPers" ColumnName="PrenomPers" />
+                <ScalarProperty Name="AdressePers" ColumnName="AdressePers" />
+                <ScalarProperty Name="TelPers" ColumnName="TelPers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Utilisateur">
+            <EntityTypeMapping TypeName="BDGLAtelierModel.Utilisateur">
+              <MappingFragment StoreEntitySet="Utilisateur">
+                <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
+                <ScalarProperty Name="Identifiant" ColumnName="Identifiant" />
+                <ScalarProperty Name="IUtilisateur" ColumnName="IUtilisateur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
